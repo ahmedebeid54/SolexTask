@@ -1,0 +1,182 @@
+{
+  "info": {
+    "_postman_id": "b55bd8a3-4371-48a1-9191-c679e366fb71",
+    "name": "Test Northwind",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47294258"
+  },
+  "item": [
+    {
+      "name": "top products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://services.odata.org/V2/Northwind/Northwind.svc/Products?$top=5&$format=json",
+          "protocol": "https",
+          "host": [
+            "services",
+            "odata",
+            "org"
+          ],
+          "path": [
+            "V2",
+            "Northwind",
+            "Northwind.svc",
+            "Products"
+          ],
+          "query": [
+            {
+              "key": "$top",
+              "value": "5"
+            },
+            {
+              "key": "$format",
+              "value": "json"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "filter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://services.odata.org/V2/Northwind/Northwind.svc/Products?$filter=ProductID gt 14&format=json",
+          "protocol": "https",
+          "host": [
+            "services",
+            "odata",
+            "org"
+          ],
+          "path": [
+            "V2",
+            "Northwind",
+            "Northwind.svc",
+            "Products"
+          ],
+          "query": [
+            {
+              "key": "$filter",
+              "value": "ProductID gt 14"
+            },
+            {
+              "key": "format",
+              "value": "json",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "select 4 cols",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://services.odata.org/V2/Northwind/Northwind.svc/Products?$select=ProductID,ProductName,UnitPrice&$format=json",
+          "protocol": "https",
+          "host": [
+            "services",
+            "odata",
+            "org"
+          ],
+          "path": [
+            "V2",
+            "Northwind",
+            "Northwind.svc",
+            "Products"
+          ],
+          "query": [
+            {
+              "key": "$select",
+              "value": "ProductID,ProductName,UnitPrice"
+            },
+            {
+              "key": "$format",
+              "value": "json"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "orderby unit price",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://services.odata.org/V2/Northwind/Northwind.svc/Products?$orderby=UnitPrice&$format=json",
+          "protocol": "https",
+          "host": [
+            "services",
+            "odata",
+            "org"
+          ],
+          "path": [
+            "V2",
+            "Northwind",
+            "Northwind.svc",
+            "Products"
+          ],
+          "query": [
+            {
+              "key": "$orderby",
+              "value": "UnitPrice"
+            },
+            {
+              "key": "$format",
+              "value": "json"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "post product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"ID\": 150,\r\n  \"Name\": \"Ahmed Ebeid Product\",\r\n  \"Description\": \"Created via Postman\",\r\n  \"ReleaseDate\": \"2000-10-01T00:00:00\",\r\n\r\n  \"Rating\": 4,\r\n  \"Price\": \"100.99\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://services.odata.org/V2/(S(ahmedebeid))/OData/OData.svc/Products",
+          "protocol": "https",
+          "host": [
+            "services",
+            "odata",
+            "org"
+          ],
+          "path": [
+            "V2",
+            "(S(ahmedebeid))",
+            "OData",
+            "OData.svc",
+            "Products"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
