@@ -1,0 +1,79 @@
+{
+  "info": {
+    "_postman_id": "0dddf221-bd6c-47b6-b938-8208646e97d2",
+    "name": "test fiori app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47294258"
+  },
+  "item": [
+    {
+      "name": "top products",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "filter",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "select cols",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "orderby unit price",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "post new prod",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"ID\": 150,\r\n  \"Name\": \"Ahmed Ebeid Product\",\r\n  \"Description\": \"Created via Postman\",\r\n  \"ReleaseDate\": \"2000-10-01T00:00:00\",\r\n\r\n  \"Rating\": 4,\r\n  \"Price\": \"100.99\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://ef94e083trial.launchpad.cfapps.us10.hana.ondemand.com/321353c6-903a-4d80-bb23-518147a850c2.comsolextrainingnorthwindproducts.comsolextrainingnorthwindproducts-0.0.1/V2/Northwind/Northwind.svc/Products",
+          "protocol": "https",
+          "host": [
+            "ef94e083trial",
+            "launchpad",
+            "cfapps",
+            "us10",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "321353c6-903a-4d80-bb23-518147a850c2.comsolextrainingnorthwindproducts.comsolextrainingnorthwindproducts-0.0.1",
+            "V2",
+            "Northwind",
+            "Northwind.svc",
+            "Products"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
